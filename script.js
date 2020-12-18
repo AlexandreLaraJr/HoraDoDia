@@ -5,7 +5,11 @@ function carregar(){
     var hora = data.getHours()
     var min = data.getMinutes()
     
+    if(min<10){
+        msg.innerHTML = `Agora são ${hora}:0${min}.`
+    }else{
     msg.innerHTML = `Agora são ${hora}:${min}.`
+    }
     
     if(hora>= 5 && hora < 12){
         //bom dia caraio
